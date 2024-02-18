@@ -16,7 +16,7 @@ namespace LethalCursor
 
         private void Awake()
         {
-            cursorPath = Config.Bind("General", "CursorPath", "BepInEx/plugins/LethalCompanyTemplate/Resources/cursor.png", "The path to an image to use as a cursor.");
+            cursorPath = Config.Bind("General", "CursorPath", "BepInEx/plugins/LethalCursor/Resources/cursor.png", "The path to an image to use as a cursor.");
             hotspotX = Config.Bind("General", "HotSpotX", 0, "The X value of the cursor hotspot");
             hotspotY = Config.Bind("General", "HotSpotY", 0, "The Y value of the cursor hotspot");
             disableModEntirely = Config.Bind("General.Toggles", "DisableMod", false, "Just use the default cursor.");
@@ -27,7 +27,7 @@ namespace LethalCursor
                 return;
             }
 
-            Logger.LogInfo("LethalCompanyTemplate has been loaded! The default image is the white pixel, refer to the instructions or to the config for more info!");
+            Logger.LogInfo("LethalCursor has been loaded! The default image is the white pixel, refer to the instructions or to the config for more info!");
             Logger.LogInfo($"Loading the image from {cursorPath.Value}");
 
             Texture2D cursorTexture = new Texture2D(32, 32);
